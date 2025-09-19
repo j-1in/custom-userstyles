@@ -65,7 +65,8 @@ jobs:
       - name: Apply patches
         run: |
           chmod +x ./scripts/automation/style-patch.sh
-          ./scripts/automation/style-patch.sh
+          cd ./scripts/automation/
+          ./style-patch.sh
 
       - name: Commit & Push changes
         run: |
