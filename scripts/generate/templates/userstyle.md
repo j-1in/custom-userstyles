@@ -72,10 +72,10 @@ Based on <a href="https://github.com/catppuccin/userstyles/tree/main/styles/{{ s
 {{!-- No current maintainers - show warning --}}
 {{#if collaborators.pastMaintainers.length}}
 ## ⚠️ Upstream Unmaintained
-Upstream appears unmaintained; this variant is likely not to work correctly.
+Upstream appears unmaintained; this variant may not work correctly.
 {{else}}
 ## ⚠️ Upstream Unmaintained
-Upstream appears unmaintained; this variant is likely not to work correctly.
+Upstream appears unmaintained; this variant may not work correctly.
 {{/if}}
 {{/if}}
 
