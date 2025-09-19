@@ -41,66 +41,85 @@ You’ll need a userstyle manager like:
 
 ## Gallery 
 
-<p align="center"><em> Everforest across the web</em></p>
+<p align="center"><em>Everforest across the web</em></p>
 
-### <a id="light-mode-showcase"></a>Light
+### Dark
 
-<div style="display:flex; flex-wrap:wrap; justify-content:center; gap:18px;">
-	<figure style="margin:0; max-width:320px;">
-		<img src="assets/gemini-light.png" alt="Gemini Light" style="width:100%; border:1px solid #4f5b58; border-radius:10px; background:#f1f3e3; box-shadow:0 2px 6px rgba(0,0,0,0.15);">
-		<figcaption style="text-align:center; font-size:0.85rem; margin-top:6px;">Gemini</figcaption>
-	</figure>
-	<figure style="margin:0; max-width:320px;">
-		<img src="assets/github-light.png" alt="GitHub Light" style="width:100%; border:1px solid #4f5b58; border-radius:10px; background:#f1f3e3; box-shadow:0 2px 6px rgba(0,0,0,0.15);">
-		<figcaption style="text-align:center; font-size:0.85rem; margin-top:6px;">GitHub</figcaption>
-	</figure>
-	<figure style="margin:0; max-width:320px;">
-		<img src="assets/gotour-light.png" alt="Go Tour Light" style="width:100%; border:1px solid #4f5b58; border-radius:10px; background:#f1f3e3; box-shadow:0 2px 6px rgba(0,0,0,0.15);">
-		<figcaption style="text-align:center; font-size:0.85rem; margin-top:6px;">Go Tour</figcaption>
-	</figure>
-	<figure style="margin:0; max-width:320px;">
-		<img src="assets/npm-light.png" alt="NPM Light" style="width:100%; border:1px solid #4f5b58; border-radius:10px; background:#f1f3e3; box-shadow:0 2px 6px rgba(0,0,0,0.15);">
-		<figcaption style="text-align:center; font-size:0.85rem; margin-top:6px;">NPM</figcaption>
-	</figure>
-	<figure style="margin:0; max-width:320px;">
-		<img src="assets/stackoverflow-light.png" alt="Stack Overflow Light" style="width:100%; border:1px solid #4f5b58; border-radius:10px; background:#f1f3e3; box-shadow:0 2px 6px rgba(0,0,0,0.15);">
-		<figcaption style="text-align:center; font-size:0.85rem; margin-top:6px;">Stack Overflow</figcaption>
-	</figure>
-	<figure style="margin:0; max-width:320px;">
-		<img src="assets/wikipedia-light.png" alt="Wikipedia Light" style="width:100%; border:1px solid #4f5b58; border-radius:10px; background:#f1f3e3; box-shadow:0 2px 6px rgba(0,0,0,0.15);">
-		<figcaption style="text-align:center; font-size:0.85rem; margin-top:6px;">Wikipedia</figcaption>
-	</figure>
-</div>
+<table>
+  <tr>
+    <td align="center">
+      <img src="assets/ghostty-dark.png" alt="Ghostty Dark" width="300"/>
+      <br/>
+      <strong>Ghostty</strong>
+    </td>
+    <td align="center">
+      <img src="assets/github-dark.png" alt="GitHub Dark" width="300"/>
+      <br/>
+      <strong>GitHub</strong>
+    </td>
+    <td align="center">
+      <img src="assets/npm-dark.png" alt="NPM Dark" width="300"/>
+      <br/>
+      <strong>NPM</strong>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="assets/reactdev-dark.png" alt="React Dev Dark" width="300"/>
+      <br/>
+      <strong>React Dev</strong>
+    </td>
+    <td align="center">
+      <img src="assets/reddit-dark.png" alt="Reddit Dark" width="300"/>
+      <br/>
+      <strong>Reddit</strong>
+    </td>
+    <td align="center">
+      <img src="assets/wikipedia-dark.png" alt="Wikipedia Dark" width="300"/>
+      <br/>
+      <strong>Wikipedia</strong>
+    </td>
+  </tr>
+</table>
 
-### <a id="dark-mode-showcase"></a>Dark
+### Light
 
-<div style="display:flex; flex-wrap:wrap; justify-content:center; gap:18px;">
-	<figure style="margin:0; max-width:320px;">
-		<img src="assets/ghostty-dark.png" alt="Ghostty Dark" style="width:100%; border:1px solid #4f5b58; border-radius:10px; background:#2d353b; box-shadow:0 2px 6px rgba(0,0,0,0.4);">
-		<figcaption style="text-align:center; font-size:0.85rem; margin-top:6px;">Ghostty</figcaption>
-	</figure>
-	<figure style="margin:0; max-width:320px;">
-		<img src="assets/github-dark.png" alt="GitHub Dark" style="width:100%; border:1px solid #4f5b58; border-radius:10px; background:#2d353b; box-shadow:0 2px 6px rgba(0,0,0,0.4);">
-		<figcaption style="text-align:center; font-size:0.85rem; margin-top:6px;">GitHub</figcaption>
-	</figure>
-	<figure style="margin:0; max-width:320px;">
-		<img src="assets/npm-dark.png" alt="NPM Dark" style="width:100%; border:1px solid #4f5b58; border-radius:10px; background:#2d353b; box-shadow:0 2px 6px rgba(0,0,0,0.4);">
-		<figcaption style="text-align:center; font-size:0.85rem; margin-top:6px;">NPM</figcaption>
-	</figure>
-	<figure style="margin:0; max-width:320px;">
-		<img src="assets/reactdev-dark.png" alt="React Dev Dark" style="width:100%; border:1px solid #4f5b58; border-radius:10px; background:#2d353b; box-shadow:0 2px 6px rgba(0,0,0,0.4);">
-		<figcaption style="text-align:center; font-size:0.85rem; margin-top:6px;">React Dev</figcaption>
-	</figure>
-	<figure style="margin:0; max-width:320px;">
-		<img src="assets/reddit-dark.png" alt="Reddit Dark" style="width:100%; border:1px solid #4f5b58; border-radius:10px; background:#2d353b; box-shadow:0 2px 6px rgba(0,0,0,0.4);">
-		<figcaption style="text-align:center; font-size:0.85rem; margin-top:6px;">Reddit</figcaption>
-	</figure>
-	<figure style="margin:0; max-width:320px;">
-		<img src="assets/wikipedia-dark.png" alt="Wikipedia Dark" style="width:100%; border:1px solid #4f5b58; border-radius:10px; background:#2d353b; box-shadow:0 2px 6px rgba(0,0,0,0.4);">
-		<figcaption style="text-align:center; font-size:0.85rem; margin-top:6px;">Wikipedia</figcaption>
-	</figure>
-</div>
-
+<table>
+  <tr>
+    <td align="center">
+      <img src="assets/gemini-light.png" alt="Gemini Light" width="300"/>
+      <br/>
+      <strong>Gemini</strong>
+    </td>
+    <td align="center">
+      <img src="assets/github-light.png" alt="GitHub Light" width="300"/>
+      <br/>
+      <strong>GitHub</strong>
+    </td>
+    <td align="center">
+      <img src="assets/gotour-light.png" alt="Go Tour Light" width="300"/>
+      <br/>
+      <strong>Go Tour</strong>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="assets/npm-light.png" alt="NPM Light" width="300"/>
+      <br/>
+      <strong>NPM</strong>
+    </td>
+    <td align="center">
+      <img src="assets/stackoverflow-light.png" alt="Stack Overflow Light" width="300"/>
+      <br/>
+      <strong>Stack Overflow</strong>
+    </td>
+    <td align="center">
+      <img src="assets/wikipedia-light.png" alt="Wikipedia Light" width="300"/>
+      <br/>
+      <strong>Wikipedia</strong>
+    </td>
+  </tr>
+</table>
 
 ---
 
