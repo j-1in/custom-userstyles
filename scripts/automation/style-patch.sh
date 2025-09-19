@@ -7,10 +7,9 @@ for dir in */; do
         style=$(basename "$dir")
         file="$dir/catppuccin.user.less"
         if [ -f "$file" ]; then
-            if grep -q "https://raw.githubusercontent.com/AdityaAparadh/everforest-userstyles/refs/heads/dev/lib/lib.less" "$file"; then
-                echo "Skipping."
-                continue
-            fi
+            # if grep -q "https://raw.githubusercontent.com/AdityaAparadh/everforest-userstyles/refs/heads/main/lib/lib.less" "$file"; then
+            #     continue
+            # fi
             
             echo "Processing $file"
             
@@ -26,7 +25,7 @@ for dir in */; do
             
             sed -i 's/Soothing pastel theme/Warm forest theme/g' "$file"
             
-            sed -i 's|https://userstyles.catppuccin.com/lib/lib.less|https://raw.githubusercontent.com/AdityaAparadh/everforest-userstyles/refs/heads/dev/lib/lib.less|g' "$file"
+            sed -i 's|https://userstyles.catppuccin.com/lib/lib.less|https://raw.githubusercontent.com/AdityaAparadh/everforest-userstyles/refs/heads/main/lib/lib.less|g' "$file"
         else
             echo "File $file not found"
         fi
