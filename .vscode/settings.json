@@ -1,5 +1,8 @@
 {
   "deno.enable": true,
   "editor.defaultFormatter": "denoland.vscode-deno",
-  "markdown.extension.toc.updateOnSave": false
+  "markdown.extension.toc.updateOnSave": false,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
 }
