@@ -1,24 +1,84 @@
-name: Build Stylus Export
+name: Build & Release
 
 on:
-  workflow_dispatch:
-  push:
-    branches: [main]
-    paths-ignore: ["docs/**"]
+  workflow_dispatch: 
+  schedule:
+    - cron: "0 * * * *" 
 
 jobs:
-  build:
-    if: github.repository == 'catppuccin/userstyles'
+  check-upstream:
     runs-on: ubuntu-latest
-    permissions:
-      # Give the default GITHUB_TOKEN write permission to commit and push the
-      # added or changed files to the repository.
-      contents: write
+    outputs:
+      should_run: ${{ steps.check.outputs.should_run }}
+    steps:
+      - name: Checkout this repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Add upstream & fetch
+        run: |
+          git remote add upstream https://github.com/catppuccin/userstyles.git
+          git fetch upstream main
+
+      - id: check
+        name: Check if upstream has new commits
+        run: |
+          LOCAL_SHA=$(git rev-parse origin/main)
+          UPSTREAM_SHA=$(git rev-parse upstream/main)
+          echo "Local main:    $LOCAL_SHA"
+          echo "Upstream main: $UPSTREAM_SHA"
+          if [ "$LOCAL_SHA" != "$UPSTREAM_SHA" ]; then
+            echo "Upstream has new commits."
+            echo "should_run=true" >> $GITHUB_OUTPUT
+          else
+            echo "No new commits upstream. Skipping build."
+            echo "should_run=false" >> $GITHUB_OUTPUT
+          fi
+
+  build:
+    needs: check-upstream
+    if: needs.check-upstream.outputs.should_run == 'true'
+    runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout this repo
+        uses: actions/checkout@v4
         with:
-          token: ${{ secrets.USERSTYLES_TOKEN }}
+          persist-credentials: true
+          fetch-depth: 0
+
+      - name: Fetch upstream repo
+        run: |
+          git remote add upstream https://github.com/catppuccin/userstyles.git
+          git fetch upstream main
+
+      - name: Sync specified files from upstream
+        run: |
+          git checkout upstream/main -- \
+            .github/CODEOWNERS \
+            .github/issue-labeler.yml \
+            .pr-labeler.yml \
+            styles/
+          echo "Synced specified files from upstream"
+
+      - name: Apply patches
+        run: |
+          chmod +x ./scripts/apply-patches.sh
+          ./scripts/apply-patches.sh
+
+      - name: Commit & Push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .github/CODEOWNERS .github/issue-labeler.yml .pr-labeler.yml styles/ || true
+          git add -u || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: sync with upstream & apply patches"
+            git push origin HEAD:main
+          fi
 
       - name: Setup Deno
         uses: nekowinston/setup-deno@main
@@ -28,7 +88,15 @@ jobs:
       - name: Generate Stylus import
         run: deno task ci:stylus-import
 
-      - name: Upload release artifact
-        run: gh release upload --clobber all-userstyles-export ./dist/import.json
+      - name: Publish rolling release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: rolling
+          name: Rolling Release
+          body: "Automated build patched for everforst, from upstream catppuchin main branch."
+          files: dist/import.json
+          draft: false
+          prerelease: false
         env:
-          GH_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
