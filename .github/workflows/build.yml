@@ -85,7 +85,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add .github/CODEOWNERS .github/issue-labeler.yml .pr-labeler.yml styles/ .last_upstream_sha || true
+          git add .github/CODEOWNERS .github/issue-labeler.yml .github/pr-labeler.yml styles/ .last_upstream_sha || true
           git add -u || true
           if git diff --cached --quiet; then
             echo "No changes to commit"
