@@ -1,0 +1,89 @@
+/* ==UserStyle==
+@name Hoppscotch Everforest
+@namespace github.com/adityaaparadh/everforest-userstyles/styles/hoppscotch
+@homepageURL https://github.com/adityaaparadh/everforest-userstyles/tree/main/styles/hoppscotch
+@version 2025.09.06
+@updateURL https://github.com/adityaaparadh/everforest-userstyles/raw/main/styles/hoppscotch/catppuccin.user.less
+@supportURL https://github.com/adityaaparadh/everforest-userstyles/issues?q=is%3Aopen+is%3Aissue+label%3Ahoppscotch
+@description Warm forest theme for Hoppscotch
+@author Catppuccin
+@license MIT
+
+@preprocessor less
+@var select lightFlavor "Light Flavor" ["latte:Latte*", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha"]
+@var select darkFlavor "Dark Flavor" ["latte:Latte", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha*"]
+@var select accentColor "Accent" ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve*", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
+==/UserStyle== */
+
+@import "https://cdn.jsdelivr.net/gh/AdityaAparadh/everforest-userstyles@main/lib/lib.less";
+
+@-moz-document domain("hoppscotch.io") {
+  :root.dark {
+    #catppuccin(@darkFlavor);
+  }
+
+  :root.light {
+    #catppuccin(@lightFlavor);
+  }
+
+  #catppuccin(@flavor) {
+    #lib.palette();
+    #lib.defaults();
+    // TODO: Do we need to set the selection color in the defaults? Why is it necessary here but not elsewhere?
+    ::selection {
+      color: @text !important;
+    }
+
+    @accent-light-alpha: 1.1;
+    @accent-dark-alpha: 0.9;
+    @accent-gradient-from-color: 1.05;
+    @accent-gradient-via-color: 1.2;
+    @accent-gradient-to-color: 0.85;
+
+    --primary-color: @base;
+    --primary-light-color: @surface1;
+    --primary-dark-color: @crust;
+    --primary-contrast-color: @mantle;
+    --secondary-color: @subtext0;
+    --secondary-light-color: @subtext0;
+    --secondary-dark-color: @subtext1;
+    --divider-color: @overlay0;
+    --divider-light-color: @overlay1;
+    --divider-dark-color: @surface2;
+    --error-color: @red;
+    --tooltip-color: @text;
+    --popover-color: @crust;
+    --editor-theme: "vscode-esque";
+    --editor-type-color: fade(@mauve, 90%);
+    --editor-name-color: @blue;
+    --editor-operator-color: @mauve;
+    --editor-invalid-color: @maroon;
+    --editor-separator-color: @overlay0;
+    --editor-meta-color: @overlay0;
+    --editor-variable-color: @green;
+    --editor-link-color: @sapphire;
+    --editor-constant-color: fade(@lavender, 1.2%);
+    --editor-keyword-color: @red;
+    --accent-color: @accent;
+    --accent-light-color: fade(@accent, @accent-light-alpha);
+    --accent-dark-color: fade(@accent, @accent-dark-alpha);
+    --accent-contrast-color: @crust;
+    --gradient-from-color: fade(@accent, @accent-gradient-from-color);
+    --gradient-via-color: fade(@accent, @accent-gradient-via-color);
+    --gradient-to-color: fade(@accent, @accent-gradient-to-color);
+
+    --editor-process-color: @text;
+
+    .ͼ1 .cm-placeholder {
+      color: @text;
+    }
+
+    .cm-focused .cm-activeLine {
+      background-color: @surface0;
+    }
+
+    .cm-focused .cm-activeLineGutter {
+      background-color: @surface2;
+    }
+  }
+}
