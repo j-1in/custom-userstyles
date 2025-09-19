@@ -1,9 +1,9 @@
-import * as path from "@std/path";
-import { REPO_ROOT } from "@/constants.ts";
+// import * as path from "@std/path";
+// import { REPO_ROOT } from "@/constants.ts";
 
 import { syncIssueLabels } from "@/generate/labels.ts";
 import { generateStyleReadmes } from "@/generate/readme-styles.ts";
-import { writeWithPreamble } from "@/generate/utils.ts";
+// import { writeWithPreamble } from "@/generate/utils.ts";
 import {
   getAuthenticatedOctokit,
   getUserstylesData,
@@ -63,7 +63,9 @@ async function userstylesStaffCodeOwners() {
     "\n",
   );
 }
-await writeWithPreamble(
-  path.join(REPO_ROOT, ".github/CODEOWNERS"),
-  `${maintainersCodeOwners()}\n\n${await userstylesStaffCodeOwners()}`,
-);
+
+// No need to update CODEOWNERS from here, it is synced from upstream
+// await writeWithPreamble(
+//   path.join(REPO_ROOT, ".github/CODEOWNERS"),
+//   `${maintainersCodeOwners()}\n\n${await userstylesStaffCodeOwners()}`,
+// );

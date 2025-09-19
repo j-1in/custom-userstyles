@@ -959,4 +959,4 @@ userstyles:
     categories: [productivity]
     color: peach
     current-maintainers: [*ashish0kumar]
-yaml-language-server: $schema=userstyles.schema.json
+# yaml-language-server: $schema=userstyles.schema.json

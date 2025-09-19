@@ -51,6 +51,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Setup Deno
+        uses: nekowinston/setup-deno@main
+        with:
+          deno-version: v2.3.5
+
       - name: Checkout this repo
         uses: actions/checkout@v4
         with:
@@ -81,6 +86,9 @@ jobs:
         run: |
           echo "${{ needs.check-upstream.outputs.upstream_sha }}" > .last_upstream_sha
 
+      - name: Generate READMEs
+        run: deno task ci:generate
+
       - name: Commit & Push changes
         run: |
           git config user.name "github-actions[bot]"
@@ -94,10 +102,7 @@ jobs:
             git push origin HEAD:main
           fi
 
-      - name: Setup Deno
-        uses: nekowinston/setup-deno@main
-        with:
-          deno-version: v2.3.5
+
 
       - name: Generate Stylus import
         run: deno task ci:stylus-import
