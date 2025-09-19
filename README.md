@@ -17,13 +17,6 @@
 This project brings the **Everforest** color palette to websites via **userstyles**.  
 It’s a fork of [Catppuccin userstyles](https://github.com/catppuccin/userstyles), but with an Everforest-style palette.  
 
-It achieves this by modifying color values inside `lib/lib.less`, specifically for the defaults : 
-
-`Catppuccin Mocha` -> `Everforest Dark` <br/>
-`Catppuccin Latte` -> `Everforest Light` <br/>
-`Accent Mauve `  -> `Green` <br/>
-
-
 ---
 
 ## Goals  
