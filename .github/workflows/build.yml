@@ -94,7 +94,7 @@ jobs:
         with:
           tag_name: rolling
           name: Rolling Release
-          body: "Automated build patched for everforst, from upstream catppuchin main branch."
+          body: "Automated build patched for everforest, from upstream catppuccin main branch."
           files: dist/import.json
           draft: false
           prerelease: false

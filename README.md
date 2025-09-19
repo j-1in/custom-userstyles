@@ -12,12 +12,11 @@
 
 ---
 
-## ✨ About  
+## About  
 
 This project brings the **Everforest** color palette to websites via **userstyles**.  
 It’s a fork of [Catppuccin userstyles](https://github.com/catppuccin/userstyles), but with the Everforest palette.  
 
-> Everforest is my current favorite theme, but no comprehensive userstyles exist for it, so this project is here to change that!  
 
 ---
 
@@ -25,9 +24,7 @@ It’s a fork of [Catppuccin userstyles](https://github.com/catppuccin/userstyle
 
 1. **Everforest Everywhere** – Apply the Everforest theme to popular websites.  
 2. **Based on Catppuccin** – Reuse their structure and methodology for easier maintenance.  
-3. **Automated Conversions** – Explre automation so future Catppuccin updates can be converted into Everforest.  
-4. **Community Driven** – Open for contributions, tweaks, and new styles.  
-
+3. **Automated Conversions** – Automation so future Catppuccin updates can be converted into Everforest.  
 
 ---
 
@@ -46,16 +43,6 @@ You’ll need a userstyle manager like:
 ## Screenshots  
 
 _Coming soon!_ 🌱  
-
----
-
-## 🛠️ Contributing  
-
-We welcome contributions! 🌿  
-
-- Found a bug? Open an [issue](https://github.com/AdityaAparadh/everforest-userstyles/issues).  
-- Want to add a new site? Submit a PR with your style under `/styles`.  
-- Have ideas for automation? Let’s discuss!  
 
 ---
 
