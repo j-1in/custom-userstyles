@@ -21,9 +21,7 @@ It’s a fork of [Catppuccin userstyles](https://github.com/catppuccin/userstyle
 ---
 
 ## Goals  
-
-1. **Everforest Everywhere** – Apply the Everforest theme to popular websites.  
-2. **Based on Catppuccin** – Reuse their structure and methodology for easier maintenance.  
+1. **Everforest Everywhere** – Apply the Everforest theme to popular websites.  2. **Based on Catppuccin** – Reuse their structure and scripts for easier maintenance.
 3. **Automated Conversions** – Automation so future Catppuccin updates can be converted into Everforest.  
 
 ---
@@ -35,9 +33,9 @@ You’ll need a userstyle manager like:
 
 ### Steps:  
 1. Install Stylus.  
-2. Browse the [styles](./styles) directory.  
-3. Pick a site, click **Raw**, and Stylus should prompt you to install.  
-
+2. Download [import.json)(https://github.com/AdityaAparadh/everforest-userstyles/releases/download/rolling/import.json) from releases.
+3. Open the Stylus “manage” page.
+4. On the sidebar panel, click the Import button in the Backup section, and select the downloaded file from step 1.3. 3. 
 ---
 
 ## Screenshots  

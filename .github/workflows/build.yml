@@ -1,15 +1,16 @@
 name: Build & Release
 
 on:
-  workflow_dispatch: 
+  workflow_dispatch:
   schedule:
-    - cron: "0 * * * *" 
+    - cron: "0 * * * *"
 
 jobs:
   check-upstream:
     runs-on: ubuntu-latest
     outputs:
       should_run: ${{ steps.check.outputs.should_run }}
+      upstream_sha: ${{ steps.check.outputs.upstream_sha }}
     steps:
       - name: Checkout this repo
         uses: actions/checkout@v4
@@ -22,13 +23,21 @@ jobs:
           git fetch upstream main
 
       - id: check
-        name: Check if upstream has new commits
+        name: Compare last synced SHA with upstream
         run: |
-          LOCAL_SHA=$(git rev-parse origin/main)
           UPSTREAM_SHA=$(git rev-parse upstream/main)
-          echo "Local main:    $LOCAL_SHA"
-          echo "Upstream main: $UPSTREAM_SHA"
-          if [ "$LOCAL_SHA" != "$UPSTREAM_SHA" ]; then
+          echo "upstream_sha=$UPSTREAM_SHA" >> $GITHUB_OUTPUT
+          echo "Latest upstream commit: $UPSTREAM_SHA"
+
+          if [ -f ".last_upstream_sha" ]; then
+            LAST_SYNCED_SHA=$(cat .last_upstream_sha)
+            echo "Last synced upstream commit: $LAST_SYNCED_SHA"
+          else
+            LAST_SYNCED_SHA=""
+            echo "No last synced SHA found (first run)."
+          fi
+
+          if [ "$LAST_SYNCED_SHA" != "$UPSTREAM_SHA" ]; then
             echo "Upstream has new commits."
             echo "should_run=true" >> $GITHUB_OUTPUT
           else
@@ -68,16 +77,20 @@ jobs:
           cd ./scripts/automation/
           ./style-patch.sh
 
+      - name: Update last synced SHA
+        run: |
+          echo "${{ needs.check-upstream.outputs.upstream_sha }}" > .last_upstream_sha
+
       - name: Commit & Push changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add .github/CODEOWNERS .github/issue-labeler.yml .pr-labeler.yml styles/ || true
+          git add .github/CODEOWNERS .github/issue-labeler.yml .pr-labeler.yml styles/ .last_upstream_sha || true
           git add -u || true
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore: sync with upstream & apply patches"
+            git commit -m "chore: sync with upstream@${{ needs.check-upstream.outputs.upstream_sha }} & apply patches"
             git push origin HEAD:main
           fi
 
