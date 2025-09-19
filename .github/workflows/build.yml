@@ -58,14 +58,14 @@ jobs:
           git checkout upstream/main -- \
             .github/CODEOWNERS \
             .github/issue-labeler.yml \
-            .pr-labeler.yml \
+            .github/pr-labeler.yml \
             styles/
           echo "Synced specified files from upstream"
 
       - name: Apply patches
         run: |
-          chmod +x ./scripts/apply-patches.sh
-          ./scripts/apply-patches.sh
+          chmod +x ./scripts/automation/style-patch.sh
+          ./scripts/automation/style-patch.sh
 
       - name: Commit & Push changes
         run: |
