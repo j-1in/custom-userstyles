@@ -51,10 +51,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Setup Deno
-        uses: nekowinston/setup-deno@main
-        with:
-          deno-version: v2.3.5
+
 
       - name: Checkout this repo
         uses: actions/checkout@v4
@@ -85,6 +82,11 @@ jobs:
       - name: Update last synced SHA
         run: |
           echo "${{ needs.check-upstream.outputs.upstream_sha }}" > .last_upstream_sha
+
+      - name: Setup Deno
+        uses: nekowinston/setup-deno@main
+        with:
+          deno-version: v2.3.5
 
       - name: Generate READMEs
         run: deno task ci:generate

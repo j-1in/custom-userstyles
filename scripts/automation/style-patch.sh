@@ -25,7 +25,7 @@ for dir in */; do
             
             sed -i 's/Soothing pastel theme/Warm forest theme/g' "$file"
             
-            sed -i 's|https://userstyles.catppuccin.com/lib/lib.less|https://raw.githubusercontent.com/AdityaAparadh/everforest-userstyles/refs/heads/main/lib/lib.less|g' "$file"
+            sed -i 's|https://userstyles.catppuccin.com/lib/lib.less|https://cdn.jsdelivr.net/gh/AdityaAparadh/everforest-userstyles@dev/lib/lib.less|g' "$file"
         else
             echo "File $file not found"
         fi
