@@ -70,7 +70,8 @@ jobs:
             .github/CODEOWNERS \
             .github/issue-labeler.yml \
             .github/pr-labeler.yml \
-            styles/
+            styles/  \
+            scripts/userstyles.yml
           echo "Synced specified files from upstream"
 
       - name: Apply patches
@@ -95,7 +96,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add .github/CODEOWNERS .github/issue-labeler.yml .github/pr-labeler.yml styles/ .last_upstream_sha || true
+          git add .github/CODEOWNERS .github/issue-labeler.yml .github/pr-labeler.yml styles/ scripts/userstyles.yml .last_upstream_sha || true
           git add -u || true
           if git diff --cached --quiet; then
             echo "No changes to commit"
