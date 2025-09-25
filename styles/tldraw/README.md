@@ -34,11 +34,15 @@
 Based on <a href="https://github.com/catppuccin/userstyles/tree/main/styles/tldraw">Catppuccin tldraw userstyle</a> by:
 
 <div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-<a href="https://github.com/GenShibe" target="_blank" style="text-decoration: none;">
+<a href="https://github.com/NekoDrone" target="_blank" style="text-decoration: none;">
+<img src="https://github.com/NekoDrone.png?size=80" width="80" height="80" style="border-radius: 50%; display: block; margin: 0 auto;" alt="NekoDrone"/>
+<div style="text-align: center; font-weight: bold; color: #a7c080;">NekoDrone</div>
+</a>
+<a href="https://github.com/GenShibe" target="_blank" style="text-decoration: none; opacity: 0.7;">
 <img src="https://github.com/GenShibe.png?size=80" width="80" height="80" style="border-radius: 50%; display: block; margin: 0 auto;" alt="GenShibe"/>
 <div style="text-align: center; font-weight: bold; color: #a7c080;">GenShibe</div>
 </a>
-<a href="https://github.com/uncenter" target="_blank" style="text-decoration: none;">
+<a href="https://github.com/uncenter" target="_blank" style="text-decoration: none; opacity: 0.7;">
 <img src="https://github.com/uncenter.png?size=80" width="80" height="80" style="border-radius: 50%; display: block; margin: 0 auto;" alt="uncenter"/>
 <div style="text-align: center; font-weight: bold; color: #a7c080;">uncenter</div>
 </a>
