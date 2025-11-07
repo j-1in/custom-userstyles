@@ -3,7 +3,7 @@
 
 <div align="center">
 
-# 🌲 Everforest for <a href="https://app.graphite.dev">Graphite</a>
+# 🌲 Everforest for <a href="https://app.graphite.com">Graphite</a>
 
 </div>
 
