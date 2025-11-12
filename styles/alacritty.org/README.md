@@ -3,7 +3,7 @@
 
 <div align="center">
 
-# 🌲 Everforest for <a href="https://app.graphite.com">Graphite</a>
+# 🌲 Everforest for <a href="https://alacritty.org">alacritty.org</a>
 
 </div>
 
@@ -15,7 +15,7 @@
 
 <blockquote align="center">
   <b>Note:</b> This file was <b>automatically generated</b> from the upstream 
-  <a href="https://github.com/catppuccin/userstyles/tree/main/styles/graphite">Catppuccin Graphite userstyle</a>.<br/>
+  <a href="https://github.com/catppuccin/userstyles/tree/main/styles/alacritty.org">Catppuccin alacritty.org userstyle</a>.<br/>
   It may not work exactly as intended.<br/>
   <b>Do not open issues upstream</b> for problems specific to this theme
 </blockquote>
@@ -23,7 +23,7 @@
 ## Installation
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/adityaaparadh/everforest-userstyles/main/styles/graphite/catppuccin.user.less">
+  <a href="https://raw.githubusercontent.com/adityaaparadh/everforest-userstyles/main/styles/alacritty.org/catppuccin.user.less">
 	<img src="https://img.shields.io/badge/stylus-install-a7c080?style=for-the-badge&logo=stylus&logoColor=white&labelColor=2d353b" alt="Stylus Install">
   </a>
 </p>
@@ -31,16 +31,14 @@
 <p align="center"><i>Before installing, enable <b>CSP Patching</b> in Stylus settings.</i></p>
 
 ## Credits
-Based on <a href="https://github.com/catppuccin/userstyles/tree/main/styles/graphite">Catppuccin Graphite userstyle</a> by:
+Based on <a href="https://github.com/catppuccin/userstyles/tree/main/styles/alacritty.org">Catppuccin alacritty.org userstyle</a> by:
 
 <div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-<a href="https://github.com/isabelroses" target="_blank" style="text-decoration: none; opacity: 0.7;">
-<img src="https://github.com/isabelroses.png?size=80" width="80" height="80" style="border-radius: 50%; display: block; margin: 0 auto;" alt="isabelroses"/>
-<div style="text-align: center; font-weight: bold; color: #a7c080;">isabelroses</div>
+<a href="https://github.com/AlwaysNur" target="_blank" style="text-decoration: none;">
+<img src="https://github.com/AlwaysNur.png?size=80" width="80" height="80" style="border-radius: 50%; display: block; margin: 0 auto;" alt="AlwaysNur"/>
+<div style="text-align: center; font-weight: bold; color: #a7c080;">AlwaysNur</div>
 </a>
 </div>
 
-## ⚠️ Upstream Unmaintained
-Upstream appears unmaintained; this variant may not work correctly.
 
 <!-- AUTOGEN:README END -->
