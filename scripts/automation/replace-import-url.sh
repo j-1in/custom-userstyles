@@ -9,6 +9,8 @@ set -euo pipefail
 #
 # Optional second arg: target directory (default: styles)
 #   scripts/automation/replace-import-url.sh "<NEW_URL>" path/to/styles
+#
+# https://raw.githubusercontent.com/j-1in/custom-userstyles/main/lib/lib.less
 
 NEW_URL=${1:-}
 TARGET_DIR=${2:-styles}
