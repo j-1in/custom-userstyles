@@ -2,7 +2,7 @@
 @name Last.fm Everforest
 @namespace github.com/adityaaparadh/everforest-userstyles/styles/lastfm
 @homepageURL https://github.com/adityaaparadh/everforest-userstyles/tree/main/styles/lastfm
-@version 2026.01.01
+@version 2026.01.03
 @updateURL https://github.com/adityaaparadh/everforest-userstyles/raw/main/styles/lastfm/catppuccin.user.less
 @supportURL https://github.com/adityaaparadh/everforest-userstyles/issues?q=is%3Aopen+is%3Aissue+label%3Alastfm
 @description Warm forest theme for Last.fm
@@ -456,10 +456,6 @@
       border-bottom-color: @surface1;
     }
 
-    .shout-form {
-      border-bottom-color: @surface0;
-    }
-
     .video-preview-upload-cta {
       background: @surface0;
       box-shadow: 0 0 0 2px @surface1;
@@ -470,6 +466,71 @@
 
       &::before {
         filter: @text-filter;
+      }
+    }
+
+    /* Shoutbox */
+    #shoutbox {
+      .shout,
+      .shout-form {
+        border-bottom-color: @surface0;
+      }
+
+      .shout-list {
+        .shout-user a {
+          color: @text;
+        }
+        .shout-timestamp {
+          color: @subtext0;
+
+          &:focus,
+          &:hover {
+            color: @text !important;
+          }
+        }
+
+        .shout-action,
+        .shout-reply,
+        .vote-button {
+          color: @subtext1;
+
+          &::before {
+            filter: @subtext1-filter;
+          }
+
+          &:focus,
+          &:hover {
+            color: @text !important;
+
+            &::before {
+              filter: @text-filter;
+            }
+          }
+        }
+
+        .vote-button--voted::before,
+        .vote-button--unvoted:focus::before,
+        .vote-button--unvoted:hover::before {
+          filter: @green-filter !important;
+        }
+
+        .shout-action-more {
+          .shout-more-actions {
+            &::before {
+              filter: @subtext1-filter;
+            }
+
+            &:focus::before,
+            &:hover::before {
+              filter: @text-filter !important;
+            }
+          }
+          .shout-more-actions-menu {
+            .more-item--report::before {
+              filter: @subtext0-filter;
+            }
+          }
+        }
       }
     }
 
