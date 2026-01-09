@@ -28,7 +28,6 @@
 /styles/duckduckgo @GenShibe
 /styles/elk @ryanccn
 /styles/freedesktop @NK308
-/styles/formative @r58Playz
 /styles/ghostty.org @uncenter
 /styles/github @uncenter
 /styles/gleam.run @uncenter
@@ -83,6 +82,7 @@
 /styles/picrew @Meowcelinee
 /styles/pinterest @nuexq
 /styles/planet-minecraft @Nyameliaaaa
+/styles/poe @TheAnonymousCrusher
 /styles/porkbun @uncenter
 /styles/pronouns.cc @comfysage
 /styles/pronouns.page @uncenter
@@ -93,13 +93,14 @@
 /styles/raindrop @thismoon
 /styles/react.dev @RaiderHCPlay
 /styles/rentry.co @thismoon
-/styles/searchix @adamperkowski
+/styles/searchix @koibtw
 /styles/searxng @Sekki21956 @ryanccn
 /styles/seventv @mxgic1337
 /styles/shinigami-eyes @sofiedotcafe
 /styles/snapchat-web @itzTheMeow
 /styles/spotify-web @Tnixc
 /styles/stack-overflow @uncenter
+/styles/startpage @WalkQuackBack
 /styles/status.cafe @bunfluff
 /styles/stylus @uncenter
 /styles/substack @uncenter
@@ -119,7 +120,7 @@
 /styles/youtube @isabelroses @uncenter
 /styles/zen-browser-docs @ashish0kumar
 
-/.github/ @uncenter
-/scripts/ @uncenter
-/template/ @uncenter
-/lib/ @uncenter
+/.github/ @uncenter @walkquackback
+/scripts/ @uncenter @walkquackback
+/template/ @uncenter @walkquackback
+/lib/ @uncenter @walkquackback

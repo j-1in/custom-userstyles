@@ -34,13 +34,15 @@
 Based on <a href="https://github.com/catppuccin/userstyles/tree/main/styles/startpage">Catppuccin Startpage userstyle</a> by:
 
 <div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+<a href="https://github.com/WalkQuackBack" target="_blank" style="text-decoration: none;">
+<img src="https://github.com/WalkQuackBack.png?size=80" width="80" height="80" style="border-radius: 50%; display: block; margin: 0 auto;" alt="WalkQuackBack"/>
+<div style="text-align: center; font-weight: bold; color: #a7c080;">WalkQuackBack</div>
+</a>
 <a href="https://github.com/bartlibert" target="_blank" style="text-decoration: none; opacity: 0.7;">
 <img src="https://github.com/bartlibert.png?size=80" width="80" height="80" style="border-radius: 50%; display: block; margin: 0 auto;" alt="bartlibert"/>
 <div style="text-align: center; font-weight: bold; color: #a7c080;">bartlibert</div>
 </a>
 </div>
 
-## ⚠️ Upstream Unmaintained
-Upstream appears unmaintained; this variant may not work correctly.
 
 <!-- AUTOGEN:README END -->

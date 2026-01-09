@@ -3,7 +3,7 @@
 
 <div align="center">
 
-# 🌲 Everforest for <a href="https://app.formative.com/home">Formative</a>
+# 🌲 Everforest for <a href="https://poe.com">Poe</a>
 
 </div>
 
@@ -15,7 +15,7 @@
 
 <blockquote align="center">
   <b>Note:</b> This file was <b>automatically generated</b> from the upstream 
-  <a href="https://github.com/catppuccin/userstyles/tree/main/styles/formative">Catppuccin Formative userstyle</a>.<br/>
+  <a href="https://github.com/catppuccin/userstyles/tree/main/styles/poe">Catppuccin Poe userstyle</a>.<br/>
   It may not work exactly as intended.<br/>
   <b>Do not open issues upstream</b> for problems specific to this theme
 </blockquote>
@@ -23,7 +23,7 @@
 ## Installation
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/adityaaparadh/everforest-userstyles/main/styles/formative/catppuccin.user.less">
+  <a href="https://raw.githubusercontent.com/adityaaparadh/everforest-userstyles/main/styles/poe/catppuccin.user.less">
 	<img src="https://img.shields.io/badge/stylus-install-a7c080?style=for-the-badge&logo=stylus&logoColor=white&labelColor=2d353b" alt="Stylus Install">
   </a>
 </p>
@@ -31,16 +31,14 @@
 <p align="center"><i>Before installing, enable <b>CSP Patching</b> in Stylus settings.</i></p>
 
 ## Credits
-Based on <a href="https://github.com/catppuccin/userstyles/tree/main/styles/formative">Catppuccin Formative userstyle</a> by:
+Based on <a href="https://github.com/catppuccin/userstyles/tree/main/styles/poe">Catppuccin Poe userstyle</a> by:
 
 <div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-<a href="https://github.com/r58Playz" target="_blank" style="text-decoration: none; opacity: 0.7;">
-<img src="https://github.com/r58Playz.png?size=80" width="80" height="80" style="border-radius: 50%; display: block; margin: 0 auto;" alt="r58Playz"/>
-<div style="text-align: center; font-weight: bold; color: #a7c080;">r58Playz</div>
+<a href="https://github.com/TheAnonymousCrusher" target="_blank" style="text-decoration: none;">
+<img src="https://github.com/TheAnonymousCrusher.png?size=80" width="80" height="80" style="border-radius: 50%; display: block; margin: 0 auto;" alt="TheAnonymousCrusher"/>
+<div style="text-align: center; font-weight: bold; color: #a7c080;">TheAnonymousCrusher</div>
 </a>
 </div>
 
-## ⚠️ Upstream Unmaintained
-Upstream appears unmaintained; this variant may not work correctly.
 
 <!-- AUTOGEN:README END -->
