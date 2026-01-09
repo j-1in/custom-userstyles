@@ -34,9 +34,9 @@
 Based on <a href="https://github.com/catppuccin/userstyles/tree/main/styles/searchix">Catppuccin Searchix userstyle</a> by:
 
 <div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-<a href="https://github.com/adamperkowski" target="_blank" style="text-decoration: none;">
-<img src="https://github.com/adamperkowski.png?size=80" width="80" height="80" style="border-radius: 50%; display: block; margin: 0 auto;" alt="adamperkowski"/>
-<div style="text-align: center; font-weight: bold; color: #a7c080;">adamperkowski</div>
+<a href="https://github.com/koibtw" target="_blank" style="text-decoration: none;">
+<img src="https://github.com/koibtw.png?size=80" width="80" height="80" style="border-radius: 50%; display: block; margin: 0 auto;" alt="koibtw"/>
+<div style="text-align: center; font-weight: bold; color: #a7c080;">koibtw</div>
 </a>
 </div>
 
